@@ -11,6 +11,7 @@ const searchField = ref();
 const searchDebounce = useDebounceFn(() => {
   search.value = searchField.value;
 }, 500);
+let abortController: AbortController;
 
 // states
 const loading = ref(true);
@@ -51,6 +52,9 @@ const headers = [
 
 // functions
 const loadItems = async ({ page, itemsPerPage, sortBy }) => {
+  if (abortController) abortController.abort();
+  abortController = new AbortController();
+
   loading.value = true;
   axios
     .get('/api/transactions', {
@@ -60,11 +64,10 @@ const loadItems = async ({ page, itemsPerPage, sortBy }) => {
         sortBy: JSON.stringify(sortBy),
         search: search.value,
       },
+      signal: abortController.signal,
     })
     .then((response) => {
       data.value = response.data as any;
-    })
-    .finally(() => {
       loading.value = false;
     });
 };

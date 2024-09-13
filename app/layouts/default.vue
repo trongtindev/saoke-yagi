@@ -37,7 +37,7 @@ const drawer = ref();
         <v-list :nav="true" :lines="false">
           <v-list-item
             rounded
-            href="https://github.com/trongtindev"
+            href="https://github.com/trongtindev/saoke-yagi"
             target="_blank"
             title="Github"
             :prepend-icon="mdiGithub"
