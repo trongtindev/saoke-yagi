@@ -4,14 +4,14 @@ export default defineNuxtConfig({
     nitro: {
       preset: 'vercel',
       storage: {
-        data: { driver: 'vercelKV' },
+        cache: { driver: 'vercelKV' },
       },
     },
   },
 
   devtools: { enabled: false },
 
-  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/device'],
 
   future: {
     compatibilityVersion: 4,

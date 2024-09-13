@@ -21,6 +21,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@nuxtjs/device": "^3.2.2",
     "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
     "@nuxt/eslint": "^0.5.7",
     "@pinia/nuxt": "^0.5.4",

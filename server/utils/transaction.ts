@@ -36,5 +36,6 @@ export const findTransaction = defineCachedFunction(
         'base64',
       );
     },
+    base: 'cache',
   },
 );

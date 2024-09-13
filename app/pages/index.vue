@@ -78,7 +78,7 @@ watch(
 
 <template>
   <div>
-    <v-form class="mt-4">
+    <div class="mt-4">
       <v-text-field
         v-model="searchField"
         variant="solo"
@@ -87,7 +87,7 @@ watch(
         :clearable="true"
         :hide-details="true"
       />
-    </v-form>
+    </div>
 
     <client-only>
       <v-card class="mt-4">
