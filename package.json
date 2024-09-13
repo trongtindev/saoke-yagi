@@ -1,0 +1,41 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nuxt dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "nuxt build",
+    "analyze": "nuxi analyze",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "format": "prettier . --write",
+    "postinstall": "nuxt prepare",
+    "preinstall": "npx only-allow bun",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.1",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
+    "@nuxt/eslint": "^0.5.7",
+    "@pinia/nuxt": "^0.5.4",
+    "@vercel/kv": "^2.0.0",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
+    "axios": "^1.7.7",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.6",
+    "mongodb": "^6.9.0",
+    "only-allow": "^1.2.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.0",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue-chartjs": "^5.3.1",
+    "vuetify": "^3.7.1"
+  }
+}

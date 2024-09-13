@@ -1,0 +1,4 @@
+{
+  "*.ts": ["eslint", "npx prettier . --write"],
+  "*.{css,json,vue}": "npx prettier . --write"
+}
