@@ -1,14 +1,28 @@
 <script setup lang="ts">
-import { mdiHome, mdiChartBar, mdiGithub } from '@mdi/js';
+import {
+  mdiHome,
+  mdiChartBar,
+  mdiGithub,
+  mdiMenuClose,
+  mdiMenuOpen,
+} from '@mdi/js';
+
+// states
+const drawer = ref();
 </script>
 
 <template>
   <v-app>
     <v-app-bar :elevation="0" class="border-b">
+      <v-app-bar-nav-icon
+        :icon="drawer ? mdiMenuOpen : mdiMenuClose"
+        @click="drawer = !drawer"
+      />
+
       <v-app-bar-title> Sao kê đóng góp bão số 3 Yagi </v-app-bar-title>
     </v-app-bar>
 
-    <v-navigation-drawer>
+    <v-navigation-drawer v-model="drawer">
       <v-list :nav="true" :lines="false">
         <v-list-item to="/" title="Trang chủ" :prepend-icon="mdiHome" />
         <v-list-item
@@ -40,7 +54,7 @@ import { mdiHome, mdiChartBar, mdiGithub } from '@mdi/js';
           Chúng tôi sẽ cập nhật khi có dữ liệu mới từ MTTQ.
         </v-alert>
 
-        <router-view />
+        <slot />
       </v-container>
     </v-main>
   </v-app>
