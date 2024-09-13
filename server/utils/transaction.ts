@@ -28,7 +28,7 @@ export const findTransaction = defineCachedFunction(
   },
   {
     name: 'findTransaction',
-    maxAge: import.meta.dev ? 0 : 60 * 60 * 24,
+    maxAge: import.meta.dev ? 0 : 60 * 60 * 3,
     getKey: (filter, options) => {
       filter ??= {};
       options ??= {};
