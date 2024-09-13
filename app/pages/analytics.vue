@@ -62,7 +62,7 @@ onNuxtReady(async () => {
       <v-card-text
         :style="
           device.isDesktop
-            ? `height: ${window.width.value * 0.3}px;`
+            ? `height: ${window.width.value * 0.35}px;`
             : undefined
         "
       >
@@ -99,7 +99,7 @@ onNuxtReady(async () => {
       <v-card-text
         :style="
           device.isDesktop
-            ? `height: ${window.width.value * 0.3}px;`
+            ? `height: ${window.width.value * 0.35}px;`
             : undefined
         "
       >
